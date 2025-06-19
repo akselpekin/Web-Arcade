@@ -1,0 +1,63 @@
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --bg: #070707;
+  --fg: #c0c0c0;
+  --accent: #ffd700;
+  --scanline: rgba(255, 255, 255, 0.03);
+}
+html,
+body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Press Start 2P", monospace;
+  overflow: hidden;
+}
+#scanline {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0 2px,
+    var(--scanline) 2px 4px
+  );
+  mix-blend-mode: overlay;
+}
+.menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.game-card {
+  width: 260px;
+  text-align: center;
+  padding: 1.5rem 0.5rem;
+  border: 4px solid var(--fg);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 150ms ease, border-color 150ms ease;
+}
+.game-card:hover,
+.game-card:focus {
+  transform: scale(1.08);
+  border-color: var(--accent);
+  outline: none;
+}
+.game-thumb {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+  border: 2px solid var(--fg);
+  filter: grayscale(100%);
+}
+.hidden { display: none; }
