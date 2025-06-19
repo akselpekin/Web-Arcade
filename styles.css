@@ -36,6 +36,9 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  max-height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 .game-card {
   width: 260px;

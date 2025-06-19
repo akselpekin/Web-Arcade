@@ -1,4 +1,3 @@
-
 const games = [
   {
     id: "pong",
@@ -11,6 +10,24 @@ const games = [
     title: "Snake",
     path: "games/snake/index.html",
     thumb: "games/snake/thumb.png?text=Snake"
+  },
+  {
+    id: "tic-tac-toe",
+    title: "Tic Tac Toe",
+    path: "games/tic-tac-toe/index.html",
+    thumb: "games/tic-tac-toe/thumb.png?text=TTT"
+  },
+  {
+    id: "rock-paper-scissors",
+    title: "Rock Paper Scissors",
+    path: "games/rock-paper-scissors/index.html",
+    thumb: "games/rock-paper-scissors/thumb.png?text=RPS"
+  },
+  {
+    id: "bj",
+    title: "BlackJack",
+    path: "games/bj/index.html",
+    thumb: "games/bj/thumb.png?text=bj"
   }
 ];
 
@@ -47,6 +64,7 @@ function focusCard(idx) {
   cards[focusedIndex]?.blur();
   focusedIndex = (idx + cards.length) % cards.length;
   cards[focusedIndex].focus();
+  cards[focusedIndex].scrollIntoView({ block: "center", behavior: "smooth" });
 }
 
 document.addEventListener("keydown", (e) => {

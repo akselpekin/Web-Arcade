@@ -1,0 +1,6 @@
+  {
+    "id": "rock-paper-scissors",
+    "title": "Rock Paper Scissors",
+    "path": "games/rock-paper-scissors/index.html",
+    "thumb": "games/rock-paper-scissors/thumb.png?text=RPS"
+  }
