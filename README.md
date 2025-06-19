@@ -30,7 +30,8 @@ Aksel-Arcade/
 
 1. **Create a folder** under `games/` (use the game’s ID as the folder name).
 2. Drop in:
-   - `index.html`  – the game itself  
+   - `index.html`  – game entry point 
+   - `game.js`     - game logic etc... 
    - `meta.json`   – menu metadata  
    - `thumb.png`   – 200 × 150 cover (optional)
 3. Add a matching entry in `js/main.js`’s `games` array.
