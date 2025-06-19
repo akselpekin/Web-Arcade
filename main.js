@@ -4,13 +4,13 @@ const games = [
     id: "pong",
     title: "Pong",
     path: "games/pong/index.html",
-    thumb: "https://placehold.co/200x150/000/fff.png?text=Pong"
+    thumb: "games/pong/thumb.png?text=Pong"
   },
   {
     id: "snake",
     title: "Snake",
     path: "games/snake/index.html",
-    thumb: "https://placehold.co/200x150/000/fff.png?text=Snake"
+    thumb: "games/snake/thumb.png?text=Snake"
   }
 ];
 

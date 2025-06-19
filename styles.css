@@ -58,6 +58,5 @@ body {
   object-fit: cover;
   margin-bottom: 0.75rem;
   border: 2px solid var(--fg);
-  filter: grayscale(100%);
 }
 .hidden { display: none; }
