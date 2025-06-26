@@ -1,4 +1,4 @@
-# Aksel-Arcade
+# Web-Arcade
  
 A web-based game launcher.
 
@@ -9,7 +9,7 @@ A web-based game launcher.
 ## Directory structure
 
 ```t
-Aksel-Arcade/
+Web-Arcade/
 ├── index.html          # Main menu (game selector)
 ├── css/
 │   └── styles.css      # Global theme(s)

@@ -28,6 +28,12 @@ const games = [
     title: "BlackJack",
     path: "games/bj/index.html",
     thumb: "games/bj/thumb.png?text=bj"
+  },
+  {
+    id: "blind-chess",
+    title: "Blind Chess",
+    path: "games/blind-chess/index.html",
+    thumb: "games/blind-chess/thumb.png?text=Chess"
   }
 ];
 

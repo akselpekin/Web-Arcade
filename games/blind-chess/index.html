@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blind Chess</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <style>
+    body{display:flex;justify-content:center;align-items:center;height:100vh;flex-direction:column;}
+    #board{display:grid;grid-template-columns:repeat(8,60px);grid-gap:2px;}
+    .sq{
+      width:60px;height:60px;
+      display:flex;justify-content:center;align-items:center;
+      background:#111;border:1px solid var(--fg);cursor:pointer;
+    }
+    .sq:nth-child(odd){background:#333;}
+    .highlight{background:var(--accent);}
+    #status{margin-top:1rem;font-size:0.8rem;text-align:center;white-space:pre;}
+  </style>
+</head>
+<body>
+  <h2>♟️  Blind Chess</h2>
+  <!-- Don't forget which is which -->
+  <div id="board"></div>
+    <p id="status">Your move: click a square</p>
+
+  <script type="module" src="bc.js"></script>
+
+</body>
+</html>
