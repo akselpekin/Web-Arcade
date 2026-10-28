@@ -3,7 +3,7 @@ const games = [
     id: "farkle",
     title: "Farkle",
     path: "games/farkle/index.html",
-    thumb: "games/farkle/thumb.svg"
+    thumb: "games/farkle/farkle_raw.png?text=Farkle"
   },
   {
     id: "pong",
