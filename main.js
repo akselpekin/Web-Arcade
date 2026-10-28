@@ -1,5 +1,11 @@
 const games = [
   {
+    id: "farkle",
+    title: "Farkle",
+    path: "games/farkle/index.html",
+    thumb: "games/farkle/thumb.svg"
+  },
+  {
     id: "pong",
     title: "Pong",
     path: "games/pong/index.html",

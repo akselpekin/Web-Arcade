@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farkle · Web Arcade</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="farkle.css" />
+</head>
+<body>
+  <div id="scanline"></div>
+  <main class="farkle">
+    <header>
+      <a href="../../index.html" class="back">← Arcade <span>(Esc)</span></a>
+      <p class="eyebrow">SIX DICE. ONE MORE ROLL?</p>
+      <h1>FARKLE<span class="title-dot">.</span></h1>
+      <p class="intro">Keep the points. Take the risk. Know when to bank.</p>
+    </header>
+
+    <section id="setup" class="panel" aria-labelledby="setup-title">
+      <h2 id="setup-title">Take a seat</h2>
+      <form id="setup-form">
+        <div class="settings">
+          <label>Game mode
+            <select id="mode"><option value="cpu">You vs CPU</option><option value="local">2 players · same device</option></select>
+          </label>
+          <label>Winning score
+            <input id="target" type="number" min="1000" max="20000" step="1" value="1000" required />
+          </label>
+        </div>
+        <p class="hint">First to the target wins. Choose 1,000–20,000 points.</p>
+        <button class="primary" type="submit">Play Farkle →</button>
+      </form>
+    </section>
+
+    <section id="game" hidden aria-label="Farkle game">
+      <div class="game-heading"><p id="round"></p><button id="new-game" class="quiet">New game</button></div>
+      <div id="scoreboard" class="scoreboard" aria-label="Banked scores"></div>
+      <section class="panel table" aria-labelledby="turn-title">
+        <div class="table-heading"><h2 id="turn-title"></h2><span id="phase-label" class="tag"></span></div>
+        <p id="status" role="status" aria-live="polite" aria-atomic="true"></p>
+        <div id="dice" class="dice" role="group" aria-label="Rolled dice"></div>
+        <div class="points">
+          <div><span>At risk</span><strong id="turn-score">0</strong></div>
+          <div><span>Selected</span><strong id="selected-score">0</strong></div>
+          <div><span>If banked</span><strong id="bank-score">0</strong></div>
+        </div>
+        <p id="selection-help" class="hint"></p>
+        <div class="actions">
+          <button id="keep">Keep &amp; roll</button>
+          <button id="bank" class="primary">Bank &amp; pass</button>
+          <button id="next" class="primary" hidden>Next turn →</button>
+        </div>
+        <p class="shortcuts">Select: 1–6 · Keep: K · Bank: B</p>
+      </section>
+      <details class="panel history"><summary>Turn history</summary><ol id="history"></ol></details>
+    </section>
+
+    <details class="panel rules">
+      <summary>How to play &amp; scoring</summary>
+      <p>Click dice to select a scoring combination. <strong>Keep &amp; roll</strong> adds its points to your turn and rolls the remaining dice. <strong>Bank &amp; pass</strong> adds the selected points and your turn score to your total.</p>
+      <p>A roll with no scoring combination is a <strong>Farkle</strong>: all unbanked turn points are lost. Use all remaining dice to get <strong>hot dice</strong> and roll six fresh dice. Dice from separate rolls cannot be combined. Every selected die must score.</p>
+      <table>
+        <caption>Scoring from the original Go game</caption>
+        <thead><tr><th scope="col">Combination</th><th scope="col">Points</th></tr></thead>
+        <tbody>
+          <tr><td>Single 1 / single 5</td><td>100 / 50</td></tr>
+          <tr><td>Three 1s</td><td>1,000</td></tr>
+          <tr><td>Three 2s–6s</td><td>Face × 100</td></tr>
+          <tr><td>4 / 5 / 6 of a kind</td><td>Triple × 2 / 4 / 8</td></tr>
+          <tr><td>Straight 1–5</td><td>500</td></tr>
+          <tr><td>Straight 2–6</td><td>750</td></tr>
+          <tr><td>Straight 1–6</td><td>1,500</td></tr>
+        </tbody>
+      </table>
+      <p>Two-player mode is pass-and-play on this device.</p>
+    </details>
+    <footer>Based on <a href="https://github.com/akselpekin/Farkle"> by me.</a> · Made for Web Arcade</footer>
+  </main>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
